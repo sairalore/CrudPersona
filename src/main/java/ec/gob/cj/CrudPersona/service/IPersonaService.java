@@ -10,8 +10,8 @@ import java.util.Map;
  */
 public interface IPersonaService {
     List<PersonaDto> obtener();
-    PersonaDto crear(PersonaDto producto);
-    PersonaDto actualizar(Long id, PersonaDto producto);
+    PersonaDto crear(PersonaDto dto);
+    PersonaDto actualizar(Long id, PersonaDto dto);
     void eliminar(Long id);
     PersonaDto obtenerPersonaPorCedula(String cedula);
 }

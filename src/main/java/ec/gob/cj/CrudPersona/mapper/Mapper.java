@@ -1,5 +1,6 @@
 package ec.gob.cj.CrudPersona.mapper;
 
+import ec.gob.cj.CrudPersona.dto.FuncionarioDto;
 import ec.gob.cj.CrudPersona.dto.PersonaDto;
 import ec.gob.cj.CrudPersona.model.Funcionario;
 import ec.gob.cj.CrudPersona.model.Persona;
@@ -14,7 +15,17 @@ public class Mapper {
                 .id(persona.getId())
                 .nombre(persona.getNombre())
                 .cedula(persona.getCedula())
-                .esFuncionario(Boolean.FALSE)
+                .email(persona.getEmail())
+                .build();
+    }
+
+    public static FuncionarioDto toDto(Funcionario funcionario) {
+        if (funcionario == null) return null;
+        return FuncionarioDto.builder()
+                .id(funcionario.getId())
+                .cargo(funcionario.getCargo())
+                .salario(funcionario.getSalario())
+                .idPersona(funcionario.getPersona().getId())
                 .build();
     }
 

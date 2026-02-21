@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author saira
@@ -30,6 +29,9 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public PersonaDto crear(PersonaDto dto) {
+        //validaciones
+        if(dto == null) throw new RuntimeException("PersonaDto no puede ser null");
+
         Persona per = Persona.builder()
                 .cedula(dto.getCedula())
                 .nombre(dto.getNombre())

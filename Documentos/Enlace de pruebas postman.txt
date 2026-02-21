@@ -1,0 +1,27 @@
+https://documenter.getpostman.com/view/7751554/2sBXcEk1FZ
+    1. Crear personas
+	Request:
+	
+	{
+        "nombre": "Juan Solano",
+        "cedula": "182771211",
+        "email": "juan@gmail.com"
+    }
+	
+	Response:
+	{
+    "id": 1,
+    "nombre": "Juan Solano",
+    "cedula": "182771211",
+    "email": null,
+    "esFuncionario": false
+}
+
+--
+2 Crear funcionario
+	{
+        "cargo": "Analista",
+        "salario": "356.34",
+        "idPersona": 1
+    }
+	

@@ -1,14 +1,17 @@
 package ec.gob.cj.CrudPersona.service;
 
+import ec.gob.cj.CrudPersona.dto.PersonaDto;
+
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author saira
  */
 public interface IPersonaService {
     List<PersonaDto> obtener();
-    PersonaDto crear(PersonaDto producto);
-    PersonaDto actualizar(Long id, PersonaDto producto);
+    PersonaDto crear(PersonaDto dto);
+    PersonaDto actualizar(Long id, PersonaDto dto);
     void eliminar(Long id);
-    public Map<String, Object> consultarPorCedula(String cedula);
+    PersonaDto obtenerPersonaPorCedula(String cedula);
 }

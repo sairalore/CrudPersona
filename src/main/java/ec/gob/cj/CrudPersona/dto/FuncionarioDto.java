@@ -10,11 +10,9 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PersonaDto {
+public class FuncionarioDto {
     private Long id;
-    private String nombre;
-    private String cedula;
-    private String email;
-    private Boolean esFuncionario;
-
+    private String cargo;
+    private Double salario;
+    private Long idPersona;
 }
